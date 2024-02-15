@@ -143,9 +143,6 @@ with open ('archivo.txt', 'r') as f:
 
 12. Write a Python program to write a list to a file.
 
-# permiso de escritura
-
-# escribir en el archivo
 
 ```python
 items = [1, 2, 3, 4, 5, 6, 7]
