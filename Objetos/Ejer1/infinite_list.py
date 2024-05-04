@@ -1,18 +1,20 @@
 class InfiniteList:
     def __init__(self, *args, fill_value=None):
-        self.items = list(args)
+        self.args = list(args)
         self.fill_value = fill_value
 
     def __getitem__(self, index: int):
-        return self.items[index]
+        if index >= len(self.args):
+            self.args.extend([self.fill_value] * (index - len(self.args) + 1))
+        return self.args[index]
 
     def __len__(self):
-        return len(self.items)
+        return len(self.args)
 
     def __setitem__(self, index: int, item) -> None:
-        for i in range(index - len(self.items)):
-            self.items[i] = None
-        self.items[index] = item
+        if index >= len(self.args):
+            self.args.extend([self.fill_value] * (index - len(self.args) + 1))
+        self.args[index] = item
 
     def __str__(self):
-        return ','.join(self.items)
+        return ','.join(str(arg) for arg in self.args if arg is not None)
