@@ -20,3 +20,6 @@ class Fibonacci:
             return result
         else:
              raise StopIteration
+
+def run(n):
+    return list(Fibonacci(n))
