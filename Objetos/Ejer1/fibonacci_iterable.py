@@ -20,7 +20,25 @@ class Fibonacci:
             return result
         else:
              raise StopIteration
+"""mejor es:"""
+    def __init__(self, n):
+        self.n = n
+        self.a= 0
+        self.b = 1
+        self.pointer = 0
+        
+def fibonacci_calc(self):
+    result = self.a
+    self.a, self.b = self.b, self.a + self.b
+    return result 
+    
+def __next__(self):
+    if self.pointer >= self.target:
+        raise STopIteration
+    f = self.fibonacci_calc()
+    return f
 
 def run(n):
     return list(Fibonacci(n))
-""" se puede pasar a lista un iterable"""
+""" se puede pasar a lista un iterable
+es ineficiente hacer una lista con fibo"""
