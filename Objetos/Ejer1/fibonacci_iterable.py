@@ -23,3 +23,4 @@ class Fibonacci:
 
 def run(n):
     return list(Fibonacci(n))
+""" se puede pasar a lista un iterable"""
