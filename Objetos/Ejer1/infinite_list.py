@@ -4,8 +4,6 @@ class InfiniteList:
         self.fill_value = fill_value
 
     def __getitem__(self, index: int):
-        if index >= len(self.args):
-            self.args.extend([self.fill_value] * (index - len(self.args) + 1))
         return self.args[index]
 
     def __len__(self):
