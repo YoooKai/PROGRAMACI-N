@@ -22,7 +22,7 @@ class IntegerStack:
     def push(self, item: int) -> bool:
         """Añade item a la pila.
         Si la pila está llena retornar False, en otro caso retornar True"""
-        if len(self.items) < self.max_size:
+        if self.isfull():
             self.items.insert(0, item)
             return True
         return False
